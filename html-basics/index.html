@@ -4,20 +4,58 @@
     <head>
         <title>HTML BASICS</title>
 
+      <!-- Internal CSS Example/internal stylesheet -->
+        <style>
+          /* h1 {
+            color: blue;
+                     font-size:36px; 
+                     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                     text-align: center;
+          }
+          h2 {
+            color: rgb(red, green, blue);
+            background-color: rgb(52, 167, 104);  
+            text-decoration: dashed;
+          } */
 
-        
+          *paragraph {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: #333333;
+            line-height: 1.5;
+          }
+
+          *{
+            box-sizing: border-box;
+            background-color: #333333;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin: 10px;
+          }
+        </style>
     </head>
     <!-- body -->
      <body>
         
         <!-- heading level 1 -->
-        <h1>Karibu Project</h1>
+         <!-- <u>underlines the text</u> -->
+          <!-- Inline CSS Example: -->
+        <!-- <h1 style = ">color: green;
+                     font-size:36px; 
+                     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif";
+                     text-align: center; -->
+                     
+        <u>Karibu groceries LTD</u></h1>
 
         <!-- heading level 2 -->
+         <!-- <mark>Highlights the text background</mark> -->
+        <!-- <h2><mark>Introduction</mark></h2> -->
         <h2>Introduction</h2>
-
         <!-- paragraph -->
-         <P>Karibu groceries LTD is a wholesale produce distributor dealing in cereals with 2 Branches in
+         <P>
+          <!-- <b>bolds the text</b> -->
+           <!-- <i>Italicizes the text</i>  -->
+         </P>
+          <b><i>Karibu groceries LTD</i></b> is a wholesale produce distributor dealing in cereals with 2 Branches in
             different locations. Over time all operations have been recorded in ruled black books. This has
             prompted the owner to seek for a software solution.
          </P>
@@ -25,6 +63,9 @@
          <!-- image -->
           
             <img height="200" width="200" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3gZR1BmPjRLbPQZQ7-PKVcPw-lbPg-nRi-Q&s" alt="Tomato">
+            <img height="200" width="200" src="https://cdn.pixabay.com/photo/2019/02/17/08/10/okra-4001742_1280.jpg" alt="Okra">
+            <img height="200" width="200" src="intro-to-software/html-basics/images/apple.jpg" alt="Apples">
+            <img height="200" width="200" src="html-basics/images/strawberries.jpg" alt="Strawberries">
 
           <!-- heading level 2 -->
         <h2>The business</h2>
@@ -38,6 +79,44 @@
         <!-- paragraph -->
          <P>KGL deals in Beans, Grain Maize, Cow peas, G-nuts, Soybeans. It gets produce from: -
          </P>
+
+         <!-- table -->
+          <table border="2">
+              <tr>
+                  <th>User id</th>
+                  <th>User Name</th>
+                  <th>Location</th>
+                  <th>age</th>
+                  <th>email</th>
+                  <th>Contact</th>
+  
+              </tr>
+              <!-- daniel's records -->
+              <tr>
+                  <td>001</td>
+                  <td>Daniel Kamau</td>
+                  <td>Nairobi</td>
+                  <td>30</td>
+                  <td>danielkamau@gmail.com
+                  <td>0712345678</td>
+              </tr>
+              <tr>
+                  <td>002</td>
+                  <td>Rose Mary Wambui</td>
+                  <td>Thika</td>
+                  <td>25</td>
+                  <td>rose@gmail.com</td>
+                  <td>0723456789</td>
+              </tr>
+              <tr>
+                  <td>003</td>
+                  <td>Natukunda Peter</td>
+                  <td>Kangundo</td>
+                  <td>28</td>
+                  <td>peter@gmail.com</td>
+                  <td>0734567890</td>
+              </tr>
+          
 
          
      </body>

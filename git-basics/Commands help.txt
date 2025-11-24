@@ -1,0 +1,4 @@
+git init
+git status
+git add .
+git commit -m "worked on git-basics and html-basics"
