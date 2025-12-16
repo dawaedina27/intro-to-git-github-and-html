@@ -1,0 +1,33 @@
+*{
+    background-color: bisque;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* h1{
+    display: block;
+    font-size: 2em;
+    margin-block-start: ;
+    margin-block-end: ;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+    
+} */
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+.container{
+    padding: 0 20px;
+    margin: 0 auto;
+    background-color: chartreuse;
+}
+
+.navbar{
+    background-color: white;
+    position: fixed;
+}

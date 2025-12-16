@@ -1,1 +1,1246 @@
-Properties = color, font,text,
+Properties = color,
+font,
+text,
+.topbar {
+  position: fixed; /* On top of slideshow */
+  padding: 10px 20px;
+  z-index: 1000;
+  width: 100%;
+  top: 0;
+  justify-content: space-around; /* space between logo and list */
+}
+.container {
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.navwrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 15px;
+  list-style-type: none;
+}
+
+.nav-links a {
+  /* puts list items in a row */
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin: 0 10px;
+  align-items: center;
+  gap: 25px;
+  hover {
+    color: rgb(15, 53, 12);
+  }
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* spacing between links */
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.hero {
+  text-align: center;
+  background-image: url("https://refactory.academy/wp-content/uploads/2025/08/0G2A8223-2048x1365.jpg");
+  min-height: 100vh; /* minimum height should be 100 Full screen height */
+  font-size: 20px;
+  font-weight: bolder;
+  font-display: block;
+  color: rgb(10, 10, 10);
+  padding-top: 300px;
+  position: fixed;
+  width: 100%;
+  height: 100%; /* Full screen height */
+  z-index: -1; /* Behind navigation */
+}
+/* FIXED TEXT ON TOP OF SLIDESHOW */
+.hero-text,
+.hero {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  font-weight: bold;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 10; /* ALWAYS ON TOP */
+}
+.hero-links {
+  gap: 30px; /* spacing between links */
+  top: 400px;
+  position: relative;
+}
+.slideshow {
+  width: 100%;
+  height: 100vh; /* Full screen height */
+  object-fit: contain; /* Cover the entire container */
+  top: 15px;
+}
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: fade 15s infinite;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Fade animation */
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Delay each image */
+.slide:nth-child(1) {
+  animation-delay: 0s;
+}
+.slide:nth-child(2) {
+  animation-delay: 4s;
+}
+.slide:nth-child(3) {
+  animation-delay: 8s;
+}
+.slide:nth-child(4) {
+  animation-delay: 12s;
+}
+.slide:nth-child(5) {
+  animation-delay: 16s;
+}
+
+justify-content: space-between; /* Distributes space between items */
+width: 100%;
+padding-right: 0;
+padding-left: 10px;
+
+.nav-ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  gap: 20px;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bolder;
+  overflow: hidden;
+  overflow: hidden; /*Prevents list items from going outside of the list*/
+  text-decoration: none;
+}
+
+.logo,
+li {
+  color: white;
+}
+.navwrapper {
+  display: flex;
+  flex-direction: row;
+  z-index: 1000px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  text-decoration: none;
+  padding-left: 10px;
+}
+.nav-links a:hover {
+  text-decoration: none; /* keeps underline removed on hover */
+  color: yellow;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: bolder;
+  text-align: center;
+  padding-top: 250px;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+p {
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.search-container {
+  position: relative;
+  display: inline-block; /* Or flexbox for alignment */
+  background-image: search-icon;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px; /* Adjust as needed */
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888; /* Icon color */
+  cursor: pointer;
+}
+
+input[type="text"] {
+  padding-right: 0; /* Make space for the icon */
+}
+
+.hero-button {
+  width: 120px;
+  height: 50px;
+  color: rgb(234, 237, 234);
+  background-color: #2fbe47;
+  border: none;
+  display: flex;
+}
+.hero-button1 {
+  background-color: purple;
+  width: 150px;
+  height: 20px;
+  color: white;
+  border: none;
+  font-weight: bold;
+}
+.hero-button2 {
+  background-color: rgb(224, 224, 16);
+  width: 150px;
+  height: 20px;
+  color: white;
+  border: none;
+  font-weight: bold;
+}
+
+.hero-button3 {
+  background-color: white;
+  width: 150px;
+  height: 20px;
+  color: purple;
+  border: none;
+  font-weight: bold;
+}
+
+.hero-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.hero {
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents image repetition */
+  min-height: 500px; /* Example height, adjust as needed */
+  display: flex; /* For centering content within the hero */
+  align-items: center;
+  justify-content: center;
+  color: white; /* Example text color for contrast */
+  margin-top: 70px; /*space between the nav and hero section*/
+  margin-bottom: 50px;
+  animation: slide 20s infinite;
+}
+
+/* Fade animation */
+@keyframes slide {
+  0% {
+    background-image: url("https://refactory.academy/wp-content/uploads/2025/08/0G2A8223-2048x1365.jpg");
+  }
+  5% {
+    background-image: url("https://refactory.academy/wp-content/uploads/2025/07/MAL_6484-1024x682.jpeg");
+  }
+  20% {
+    background-image: url("https://refactory.academy/wp-content/uploads/2025/08/MAL_6179-1920x1279.jpeg");
+  }
+  25% {
+    background-image: url("https://refactory.academy/wp-content/uploads/2025/08/MAL_6566-2048x1365.jpeg");
+  }
+  100% {
+    background-image: url("https://refactory.academy/wp-content/uploads/2025/08/MAL_6566-2048x1365.jpeg");
+  }
+}
+
+.content-container {
+  display: flex;
+  grid-template-columns: 1fr 1fr; /* Creates two equal-width columns */
+  justify-content: space-between; /* Distributes space between items */
+  width: 100%;
+  padding-right: 0;
+  padding-left: 10px;
+  align-items: center;
+  gap: 10px;
+}
+
+.content1 {
+  width: 50%;
+}
+
+.content2 {
+  width: 50%;
+}
+/* Optional styling for columns */
+.content1-h2 {
+  color: purple;
+  font-weight: bold;
+  font-size: 20px;
+}
+.content1-h3 {
+  color: rgb(6, 138, 138);
+  font-weight: bold;
+  font-size: 20px;
+}
+.content1-p {
+  color: black;
+  text-align: left;
+}
+
+.success-section {
+  background-color: rgb(1, 1, 23);
+}
+.success-container {
+  display: flex;
+  grid-template-columns: 1fr 1fr 1fr; /* Creates two equal-width columns */
+  justify-content: space-between; /* Distributes space between items */
+  width: 100%;
+  padding-right: 0;
+  padding-left: 10px;
+  align-items: baseline;
+  gap: 10px;
+}
+.success-h2 {
+  text-align: right;
+  color: white;
+  padding-right: 150px;
+  padding-top: 50px;
+}
+.success1 {
+  display: flex;
+  width: 40%;
+  padding-left: 5px;
+  padding-top: 0px;
+}
+
+.success-img1 {
+  transform: rotate(-20deg); /*Rotates the image 45 degrees clockwise */
+  padding-top: -10px;
+  margin-top: 0px;
+  padding-right: 10px;
+  padding-left: 10px;
+  z-index: 0px;
+}
+
+.success-img2 {
+  transform: rotate(10deg);
+}
+
+.success2 {
+  width: 30%;
+}
+
+.success3 {
+  width: 30%;
+}
+
+.courses-container {
+  display: flex;
+  grid-template-columns: 1fr 1fr; /* Creates two equal-width columns */
+  gap: 20px; /* Adds a 20px gap between columns */
+  justify-content: space-between; /* Distributes space between items */
+  width: 100%;
+  padding-right: 0;
+  padding-left: 10px;
+  align-items: center;
+}
+
+.courses-h2 {
+  text-align: center;
+  color: rgb(80, 210, 210);
+  font-size: 18px;
+  margin-bottom: 0px;
+}
+
+.courses-h3 {
+  font-size: 30px;
+  text-align: center;
+  color: rgb(97, 4, 97);
+  font-weight: bolder;
+  margin-top: 0px;
+}
+
+.foundational {
+  width: 40%;
+}
+/* Optional styling for columns */
+.foundational-h2 {
+  color: rgb(75, 10, 75);
+  font-weight: bold;
+  font-size: 20px;
+}
+.foundational-p {
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: left;
+}
+
+.apprenticeship {
+  width: 40%;
+}
+/* Optional styling for columns */
+.apprenticeship-h2 {
+  color: rgb(54, 7, 54);
+  font-weight: bold;
+  font-size: 20px;
+}
+.apprenticeship-p {
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: left;
+}
+
+.advanced {
+  width: 40%;
+}
+
+.advanced-h2 {
+  color: rgb(54, 7, 54);
+  font-weight: bold;
+  font-size: 20px;
+}
+.advanced-p {
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: left;
+}
+
+.courses-button {
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 4px; /*round corners*/
+  border: none;
+}
+
+/* .foundational-button{
+    color: white;
+    background-color: yellow;
+    font-weight: bold;
+    border: none;
+
+}
+
+
+.apprenticeship-button{
+    color: white;
+    background-color: yellow;
+    font-weight: bold;
+    border: none;
+    
+}
+
+
+.advanced-button{
+    color: white;
+    background-color: rgb(190, 190, 19);
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    width: 50px;
+    height: 25px;
+    
+    
+} */
+.courses-button :hover {
+}
+
+footer {
+  background: rgb(86, 7, 86);
+  color: white;
+  padding: 40px 0 0 0; /* top padding only */
+}
+
+@media screen and (min-width: 768px) {
+  /* Styles to be applied when the screen width is 768px or wider */
+  body {
+    background-color: lightblue;
+  }
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+}
+
+/* TOP FOOTER (4 columns) */
+.footer-container {
+  grid-template-columns: 1fr 1fr;
+  display: flex;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 20px; /* space below columns */
+  background-color: rgb(86, 7, 86);
+}
+
+.footer-column {
+  width: 23%;
+  text-align: left;
+}
+
+.footer-column ul {
+  list-style: none;
+  color: aqua;
+  padding: 0;
+}
+
+.footer-column a {
+  color: #fff;
+  text-decoration: none;
+  gap: 30px;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+/* BOTTOM FOOTER (should align below columns) */
+.footer-bottom {
+  width: 90%;
+  margin: 0 auto; /* centers it */
+  padding: 15px 0; /* vertical spacing */
+  text-align: center; /* center copyright */
+  background: purple;
+  color: #bbb;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+h2 {
+  color: white;
+  font-size: 25px;
+  font-weight: bolder;
+  text-align: left;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h3 {
+  color: aqua;
+  font-size: 17px;
+  font-weight: bolder;
+  text-align: left;
+  padding-top: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.policy {
+  color: aqua;
+  font-size: 15px;
+  list-style-type: none;
+  font-weight: bold;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.copyright {
+  padding-bottom: 20px;
+  border-top: solid white;
+  border-radius: 10px;
+}
+
+/* Import Font Awesome for the search icon */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+
+.search-container {
+  display: flex; /* Arrange input and button side-by-side */
+  align-items: center; /* Vertically align items */
+  border: 1px solid #ccc;
+  border-radius: 25px; /* Rounded container */
+  overflow: hidden; /* Hide anything outside the container */
+  width: 300px; /* Adjust as needed */
+}
+
+.search-input {
+  flex-grow: 1; /* Allow input to take up available space */
+  border: none;
+  padding: 10px 15px;
+  outline: none; /* Remove default focus outline */
+  font-size: 16px;
+}
+
+.search-button {
+  background-color: #ffd700; /* Yellow background */
+  color: white;
+  border: none;
+  border-radius: 50%; /* Circular shape */
+  width: 40px; /* Adjust size as needed */
+  height: 40px; /* Adjust size as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 18px;
+  margin-right: 5px; /* Add some space between button and container edge */
+}
+
+.search-button:hover {
+  background-color: #e6c200; /* Darker yellow on hover */
+}
+
+.nav-ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none; /* Removes bullet points */
+  gap: 20px;
+  font-size: 20px;
+  font-weight: bolder;
+  overflow: hidden;
+  margin: 0;
+  padding-left: 60px;
+  padding-top: 20px;
+}
+
+/* Target the anchor links directly for styling */
+.nav-links a {
+  color: black; /* This should now work */
+  text-decoration: none; /* Removes the default underline from links */
+}
+
+.navwrapper {
+  display: flex;
+  flex-direction: row;
+  z-index: 1000px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  text-decoration: none;
+  padding-left: 10px;
+  background-color: white;
+  width: 100%;
+}
+
+.nav-links a:hover {
+  text-decoration: none; /* keeps underline removed on hover */
+  color: rgb(77, 172, 203);
+}
+
+.search-icon-link {
+  /* Container styles */
+  display: inline-flex; /* Use flexbox to center the icon */
+  justify-content: center;
+  align-items: center;
+  width: 50px; /* Set the size of the circular area */
+  height: 50px;
+  background-color: rgb(245, 245, 102); /* Yellow background color */
+  border-radius: 50%; /* Makes the container circular */
+  color: white; /* Icon color */
+  text-decoration: none; /* Remove default link underline */
+  cursor: pointer; /* Change cursor to a pointer to indicate clickability */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add a subtle shadow */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.search-icon-link:hover {
+  background-color: rgb(16, 16, 93); /* Slightly darker yellow on hover */
+}
+
+.search-icon-link i {
+  font-size: 20px; /* Adjust icon size */
+  color: white; /* Icon color */
+}
+
+/* Import Font Awesome for the search icon */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+
+.search-container {
+  display: flex; /* Arrange input and button side-by-side */
+  align-items: center; /* Vertically align items */
+  border: 1px solid #ccc;
+  border-radius: 25px; /* Rounded container */
+  overflow: hidden; /* Hide anything outside the container */
+  width: 300px; /* Adjust as needed */
+}
+
+#search-bar {
+  flex-grow: 1; /* Allow input to take up available space */
+  border: none;
+  padding: 10px 15px;
+  outline: none; /* Remove default focus outline */
+  font-size: 16px;
+}
+
+.search-icon {
+  background-color: #ffd700; /* Yellow background */
+  color: white;
+  border: none;
+  border-radius: 50%; /* Circular shape */
+  width: 40px; /* Adjust size as needed */
+  height: 40px; /* Adjust size as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 18px;
+  margin-right: 5px; /* Add some space between button and container edge */
+}
+/* .logo {
+  /* filter: brightness(0) invert(1); */
+
+h1 {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 240px;
+  color: white;
+  margin-bottom: 0px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p {
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 0px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hero-buttons {
+  display: flex;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white; /* Default text color */
+  font-weight: bold;
+  align-items: center;
+  align-content: center;
+  gap: 10px;
+  padding-left: 200px;
+  padding-bottom: 40px;
+
+  transition: background-color 0.3s ease;
+  /* This ensures the text and arrow inside flow naturally */
+}
+
+/* Specific color styles */
+.partner-with-us {
+  background-color: #800080; /* A shade of purple */
+  border: 1px solid #800080;
+  width: 180px;
+  height: 30px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  color: white; /* Default text color */
+  font-weight: bold;
+  font-size: 18px;
+  padding-top: 10px;
+}
+
+.partner-with-us:hover {
+  background-color: white; /* Slightly darker yellow on hover */
+  color: #800080;
+}
+
+.explore-programs {
+  background-color: #ffd700; /* Gold/yellow color */
+  color: black; /* Better contrast for yellow */
+  border: 1px solid #ffd700;
+  width: 180px;
+  border-radius: 5px;
+  height: 30px;
+  text-align: center;
+  color: white; /* Default text color */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  padding-top: 10px;
+}
+.explore-programs:hover {
+  background-color: white; /* Slightly darker yellow on hover */
+  color: #800080;
+}
+
+.hire-talent {
+  background-color: #ffffff;
+  color: rgb(107, 25, 107);
+  border: 1px solid #ccc;
+  width: 150px;
+  border-radius: 5px;
+  height: 30px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  padding-top: 10px;
+}
+
+.hire-talent:hover {
+  background-color: rgb(11, 11, 43); /* Slightly darker yellow on hover */
+  color: white;
+}
+
+/* Optional: Add hover effects */
+.hero-buttons:hover {
+  opacity: 0.9;
+}
+
+/* Optional: Make the arrow move slightly on hover */
+.hero-buttons:hover::after {
+  transform: translateX(4px);
+}
+
+.partner-with-us::after {
+  content: "→"; /* Inserts the arrow symbol */
+  margin-left: 8px; /* Adds space between the text and the arrow */
+  display: inline-block;
+  transition: transform 0.3s ease; /* Smooth transition for movement */
+}
+
+.explore-programs::after {
+  content: "→"; /* Inserts the arrow symbol */
+  margin-left: 8px; /* Adds space between the text and the arrow */
+  display: inline-block;
+  transition: transform 0.3s ease; /* Smooth transition for movement */
+}
+
+.hire-talent::after {
+  content: "→"; /* Inserts the arrow symbol */
+  margin-left: 8px; /* Adds space between the text and the arrow */
+  display: inline-block;
+  transition: transform 0.3s ease; /* Smooth transition for movement */
+}
+
+.hero-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.hero {
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents image repetition */
+  min-height: 500px; /* Example height, adjust as needed */
+  display: flex; /* For centering content within the hero */
+  align-items: center;
+  justify-content: center;
+  color: white; /* Example text color for contrast */
+  margin-top: 70px; /*space between the nav and hero section*/
+  margin-bottom: 50px;
+  animation: slide 20s infinite;
+}
+
+/* Fade animation */
+@keyframes slide {
+  0% {
+    background-image: url("https://refactory.academy/wp-content/uploads/2025/08/0G2A8223-2048x1365.jpg");
+  }
+  5% {
+    background-image: url("https://refactory.academy/wp-content/uploads/2025/07/MAL_6484-1024x682.jpeg");
+  }
+  20% {
+    background-image: url("https://refactory.academy/wp-content/uploads/2025/08/MAL_6179-1920x1279.jpeg");
+  }
+  25% {
+    background-image: url("https://refactory.academy/wp-content/uploads/2025/08/MAL_6566-2048x1365.jpeg");
+  }
+  100% {
+    background-image: url("https://refactory.academy/wp-content/uploads/2025/08/MAL_6566-2048x1365.jpeg");
+  }
+}
+
+.content-container {
+  display: flex;
+  grid-template-columns: 1fr 1fr; /* Creates two equal-width columns */
+  justify-content: space-between; /* Distributes space between items */
+  width: 100%;
+  padding-right: 0;
+  padding-left: 10px;
+  align-items: center;
+  gap: 10px;
+}
+
+.content1 {
+  width: 50%;
+}
+
+.content2 {
+  width: 50%;
+}
+/* Optional styling for columns */
+.content1-h2 {
+  color: purple;
+  font-weight: bold;
+  font-size: 20px;
+}
+.content1-h3 {
+  color: rgb(6, 138, 138);
+  font-weight: bold;
+  font-size: 20px;
+}
+.content1-p {
+  color: black;
+  text-align: left;
+}
+
+.courses-container {
+  display: flex;
+  grid-template-columns: 1fr 1fr; /* Creates two equal-width columns */
+  gap: 20px; /* Adds a 20px gap between columns */
+  justify-content: space-between; /* Distributes space between items */
+  width: 100%;
+  padding-right: 0;
+  padding-left: 10px;
+  align-items: center;
+}
+
+.courses-h2 {
+  text-align: center;
+  color: rgb(80, 210, 210);
+  font-size: 18px;
+  margin-bottom: 0px;
+}
+
+.courses-h3 {
+  font-size: 30px;
+  text-align: center;
+  color: rgb(97, 4, 97);
+  font-weight: bolder;
+  margin-top: 0px;
+}
+
+.foundational {
+  width: 40%;
+}
+/* Optional styling for columns */
+.foundational-h2 {
+  color: rgb(75, 10, 75);
+  font-weight: bold;
+  font-size: 20px;
+}
+.foundational-p {
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: left;
+}
+
+.apprenticeship {
+  width: 40%;
+}
+/* Optional styling for columns */
+.apprenticeship-h2 {
+  color: rgb(54, 7, 54);
+  font-weight: bold;
+  font-size: 20px;
+}
+.apprenticeship-p {
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: left;
+}
+
+.advanced {
+  width: 40%;
+}
+
+.advanced-h2 {
+  color: rgb(54, 7, 54);
+  font-weight: bold;
+  font-size: 20px;
+}
+.advanced-p {
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: left;
+}
+
+.courses-buttons {
+  background-color: rgb(212, 212, 58); /* A shade of purple */
+  border: 1px solid #beac4a;
+  width: 300px;
+  height: 100px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  color: white; /* Default text color */
+  font-size: 18px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.courses-buttons:hover {
+  background-color: rgb(13, 13, 63);
+}
+
+.success-section {
+  background-color: rgb(1, 1, 23);
+  height: 500px;
+}
+.success-container {
+  display: flex;
+  grid-template-columns: 1fr 1fr 1fr; /* Creates three equal-width columns */
+  width: 100%;
+  padding-right: 0;
+  padding-left: 10px;
+  gap: 50px;
+  color: aqua;
+  margin-top: 0px;
+}
+.success-h2 {
+  text-align: right;
+  color: white;
+  padding-right: 150px;
+  padding-top: 50px;
+  font-weight: bold;
+}
+/* Ensure the container is a flexbox that arranges items in a row */
+.success1 {
+  display: flex;
+  padding-top: 0px;
+  /* This defines a space for items to sit within */
+  position: relative; /* Useful if you use absolute positioning later */
+  margin-left: 0px;
+}
+
+/* Style for the first image */
+.success-img1 {
+  transform: rotate(-20deg);
+  /* Use margin for external spacing, not padding-bottom: 500px */
+  margin-right: 10px; /* Space between img1 and img2/text */
+  margin-left: 50px; /* Space from the left edge */
+  margin-top: 0px;
+  /* Remove padding-bottom: 500px; this is almost certainly the main problem */
+  padding-bottom: 0px;
+  /* Add a width to control image size */
+  width: 100%; /* Example size */
+}
+
+/* Style for the second image */
+.success-img2 {
+  transform: rotate(5deg);
+  padding-top: 105px; /* Pushes the image down from the top of the container */
+  padding-right: 300px;
+  padding-bottom: 100px;
+  padding-left: 250px;
+  margin-left: 0px;
+  /* width controls image size */
+  width: 100%; /* Example size */
+  position: absolute;
+}
+
+.success2 {
+  width: 20%;
+  font-size: 50px;
+  font-weight: bold;
+  padding-left: 300px;
+  margin-top: 0px;
+}
+
+.success3 {
+  width: 30%;
+  font-size: 80px;
+  font-weight: bolder;
+  padding-right: 50px;
+  color: #beac4a;
+}
+
+.tenxprogram-container {
+  grid-template-columns: 1fr 1fr;
+  display: flex;
+  width: 100%;
+  padding-left: 10px;
+  margin-bottom: 30px;
+  gap: 60px;
+}
+
+.tenx-program1 {
+  width: 50%;
+}
+
+.tenxprogram-h2 {
+  color: rgb(59, 59, 147);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.tenxprogram-h3 {
+  color: rgb(32, 32, 48);
+}
+
+.tenxprogram-p {
+  color: black;
+  text-align: left;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 14px;
+}
+
+.tenxprogram-button {
+  width: 150px;
+  height: 50px;
+  color: white;
+  border-radius: 4px;
+  padding-top: 5px;
+  border-radius: 2px;
+  color: yellowgreen;
+}
+
+.tenx-image {
+  width: 50%;
+  padding-top: 20px;
+  align-items: center;
+}
+
+footer {
+  background: rgb(27, 6, 27);
+  color: white;
+}
+
+/* TOP FOOTER (4 columns) */
+.footer-container {
+  .footer-container {
+    display: grid; /* Use CSS Grid */
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* Defines 4 equal-width columns */
+    width: 100%;
+    justify-content: space-between; /* This will have no effect in grid unless you're aligning tracks, which isn't the case here */
+    padding-bottom: 20px;
+    gap: 20px; /* Optional: Add space between grid columns */
+  }
+}
+
+.footer-column1 {
+  width: 30%;
+}
+
+.footer-column1-h2 {
+  padding-left: 50px;
+}
+
+.footer-column1-p {
+  text-align: left;
+  padding-left: 50px;
+}
+
+.footer-column2 {
+  width: 20%;
+  padding: 0 15px;
+}
+
+.footer-column2-h2 {
+  color: aqua;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.footer-column2-a a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+
+.footer-column3 {
+  width: 25%;
+  padding: 0 15px;
+}
+
+.footer-column3-h2 {
+    color: aqua;
+    font-size: 20px;
+}
+
+.whatsapp{
+  text-decoration: none;
+  color: white;
+}
+
+.whatsapp{
+  text-decoration: none;
+  color: white;
+}
+
+.footer-column4 {
+  padding: 0 15px;
+}
+
+.footer-column ul {
+  list-style: none;
+  color: aqua;
+  padding: 0;
+}
+
+.footer-column a {
+  color: #fff;
+  text-decoration: none;
+  gap: 30px;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+/* BOTTOM FOOTER (should align below columns) */
+.footer-bottom {
+  width: 90%;
+  margin: 0 auto; /* centers it */
+  padding: 15px 0; /* vertical spacing */
+  text-align: center; /* center copyright */
+  background: purple;
+  color: #bbb;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+h2 {
+  color: white;
+  font-size: 25px;
+  font-weight: bolder;
+  text-align: left;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h3 {
+  color: aqua;
+  font-size: 17px;
+  font-weight: bolder;
+  text-align: left;
+  padding-top: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.policy {
+  color: rgb(26, 173, 173);
+  font-size: 15px;
+  list-style-type: none;
+  font-weight: bold;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.copyright {
+  padding-bottom: 20px;
+  border-top: solid white;
+  border-radius: 10px;
+}

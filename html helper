@@ -1,0 +1,7 @@
+
+                            <div class="search-container">
+  <input type="text" placeholder="Search..." class="search-input">
+  <button type="submit" class="search-button">
+    <i class="fas fa-search"></i> <!-- Font Awesome search icon -->
+  </button>
+</div>
